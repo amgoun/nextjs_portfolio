@@ -127,7 +127,7 @@ const FAQ = () => {
       </div>
       <div className='center mt-36 flex justify-center py-4'>
         <div className='flex w-full max-w-[1200px] items-center justify-center overflow-x-hidden'>
-          <div className='left-0 z-50 h-full w-[150px] -translate-x-5 bg-opacity-20 bg-gradient-to-r from-secondary via-secondary/90 to-secondary/0' />
+          <div className='left-0 z-40 h-full w-[150px] -translate-x-5 bg-opacity-20 bg-gradient-to-r from-secondary via-secondary/90 to-secondary/0' />
           <motion.div
             variants={slideVariant}
             initial='initial'
@@ -144,7 +144,7 @@ const FAQ = () => {
               />
             ))}
           </motion.div>
-          <div className='right-0 z-50 h-full w-[150px] -translate-x-5 bg-opacity-20 bg-gradient-to-l from-secondary via-secondary/90 to-secondary/0' />
+          <div className='right-0 z-40 h-full w-[150px] -translate-x-5 bg-opacity-20 bg-gradient-to-l from-secondary via-secondary/90 to-secondary/0' />
         </div>
       </div>
     </section>
