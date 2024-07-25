@@ -18,11 +18,7 @@ const slideVariant = {
     x: 0
   },
   animate: {
-    x: '-135%',
-    transition: {
-      repeat: Infinity,
-      duration: 20
-    }
+    x: '-50%'
   }
 }
 
@@ -127,9 +123,15 @@ const FAQ = () => {
       </div>
       <div className='center mt-36 flex justify-center py-4'>
         <div className='flex w-full max-w-[1200px] items-center justify-center overflow-x-hidden'>
-          <div className='left-0 z-40 h-full w-[150px] -translate-x-5 bg-opacity-20 bg-gradient-to-r from-secondary via-secondary/90 to-secondary/0' />
+          <div className='right-0 z-40 h-full w-[150px] bg-opacity-20 bg-gradient-to-r from-secondary via-secondary/90 to-secondary/0' />
           <motion.div
             variants={slideVariant}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: 'linear',
+              repeatType: 'loop'
+            }}
             initial='initial'
             animate='animate'
             className='center flex space-x-12'
@@ -143,8 +145,17 @@ const FAQ = () => {
                 alt={item.alt}
               />
             ))}
+            {tech.map(item => (
+              <Image
+                key={item.alt}
+                src={item.src}
+                width={item.width}
+                height={item.height}
+                alt={item.alt}
+              />
+            ))}
           </motion.div>
-          <div className='right-0 z-40 h-full w-[150px] -translate-x-5 bg-opacity-20 bg-gradient-to-l from-secondary via-secondary/90 to-secondary/0' />
+          <div className='right-0 z-40 h-full w-[150px] bg-gradient-to-l from-secondary via-secondary/90 to-secondary/0' />
         </div>
       </div>
     </section>
